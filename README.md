@@ -7,6 +7,6 @@ Simply set env variables:
 - STREAM_BASE_NAME
   - Usually name of the streamer, is used in the output filename
 - STREAM_URL
-  - URL of the stream
+  - URL of the streamer page
 
 For example usage, refer to the [compose file](./docker-compose.yml).
