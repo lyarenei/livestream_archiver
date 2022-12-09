@@ -1,4 +1,4 @@
-FROM python
+FROM python:alpine
 
 ARG SCRIPT_FILE=save_livestream.py
 ARG SCRIPT_URL=https://raw.githubusercontent.com/mrwnwttk/livestream_scripts/main/${SCRIPT_FILE}
