@@ -1,8 +1,8 @@
 FROM python
 
-ARG SCRIPT_FILE=save_livestream.py
 ARG SCRIPT_URL=https://raw.githubusercontent.com/mrwnwttk/livestream_scripts/main/${SCRIPT_FILE}
 
+ENV SCRIPT_FILE=save_livestream.py
 ENV STREAM_BASE_NAME=""
 ENV STREAM_URL=""
 
