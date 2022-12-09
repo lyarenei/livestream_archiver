@@ -1,0 +1,29 @@
+version: "2.3"
+
+x-default: &default
+  image: ghcr.io/lyarenei/livestream_archiver:master
+  cpu_count: 2
+  mem_limit: 512m
+  mem_reservation: 256m
+  memswap_limit: 1g
+  restart: unless-stopped
+  user: 1000:100
+
+services:
+  kitboga-dvr:
+    <<: *default
+    container_name: kitboga-dvr
+    volumes:
+      - /path/to/storage/kitboga:/downloads
+    environment:
+      - STREAM_BASE_NAME=Kitboga
+      - STREAM_URL=https://www.twitch.tv/kitboga
+
+  vinesauce-dvr:
+    <<: *default
+    container_name: vinesauce-dvr
+    volumes:
+      - /path/to/storage/vinesauce:/downloads
+    environment:
+      - STREAM_BASE_NAME=Vinesauce
+      - STREAM_URL=https://www.twitch.tv/vinesauce
